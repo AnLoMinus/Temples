@@ -1,0 +1,372 @@
+/* Base card effects */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.gallery-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Temple 1 - Modern & Harmonious */
+.gallery-item[data-temple="1"] {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item[data-temple="1"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(72, 72, 72, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-item[data-temple="1"]:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Temple 2 - Gold & Crystal */
+.gallery-item[data-temple="2"] {
+  box-shadow: 0 5px 20px rgba(218, 165, 32, 0.3);
+}
+
+.gallery-item[data-temple="2"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(218, 165, 32, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.2);
+}
+
+.gallery-item[data-temple="2"]:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(218, 165, 32, 0.4);
+}
+
+/* Temple 3 - Purple Aura */
+.gallery-item[data-temple="3"] {
+  box-shadow: 0 5px 20px rgba(147, 112, 219, 0.3);
+}
+
+.gallery-item[data-temple="3"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(147, 112, 219, 0.1),
+    rgba(230, 230, 250, 0.2)
+  );
+  border: 2px solid rgba(147, 112, 219, 0.2);
+  animation: pulseAura 2s infinite;
+}
+
+@keyframes pulseAura {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* Temple 4 - Multi-color Sparks */
+.gallery-item[data-temple="4"] {
+  box-shadow: 0 5px 20px rgba(138, 43, 226, 0.3);
+}
+
+.gallery-item[data-temple="4"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.1),
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 255, 0, 0.1)
+  );
+  border: 2px solid rgba(138, 43, 226, 0.2);
+  animation: sparkle 3s infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Temple 5 - Luxurious Multi-effects */
+.gallery-item[data-temple="5"] {
+  box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+}
+
+.gallery-item[data-temple="5"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(218, 165, 32, 0.2),
+    rgba(147, 112, 219, 0.2),
+    rgba(255, 165, 0, 0.2)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.3);
+  animation: luxuryGlow 4s infinite;
+}
+
+@keyframes luxuryGlow {
+  0% {
+    filter: hue-rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    filter: hue-rotate(180deg);
+    opacity: 0.8;
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+/* Text effects for all cards */
+.gallery-item-content h3 {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-content h3 {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Image hover effects */
+.gallery-item img {
+  transition: all 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Modal specific effects */
+.modal-content img {
+  transition: all 0.5s ease;
+  filter: brightness(1.1);
+}
+
+.modal-content img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery-item::before {
+    animation: none; /* Disable animations on mobile for better performance */
+  }
+}
+
+/* Modal effects based on temple type */
+.modal[data-temple="1"] {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.modal[data-temple="1"] .modal-content {
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    45deg,
+    rgba(72, 72, 72, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.modal[data-temple="2"] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal[data-temple="2"] .modal-content {
+  box-shadow: 0 0 50px rgba(218, 165, 32, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(218, 165, 32, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.modal[data-temple="3"] {
+  background-color: rgba(73, 12, 110, 0.95);
+}
+
+.modal[data-temple="3"] .modal-content {
+  box-shadow: 0 0 50px rgba(147, 112, 219, 0.4);
+  background: linear-gradient(
+    45deg,
+    rgba(147, 112, 219, 0.1),
+    rgba(230, 230, 250, 0.1)
+  );
+  border: 2px solid rgba(147, 112, 219, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  animation: modalPulseAura 3s infinite;
+}
+
+@keyframes modalPulseAura {
+  0% {
+    box-shadow: 0 0 30px rgba(147, 112, 219, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(147, 112, 219, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(147, 112, 219, 0.3);
+  }
+}
+
+.modal[data-temple="4"] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal[data-temple="4"] .modal-content {
+  box-shadow: 0 0 50px rgba(138, 43, 226, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.1),
+    rgba(0, 0, 255, 0.1),
+    rgba(0, 255, 0, 0.1)
+  );
+  border: 2px solid rgba(138, 43, 226, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  animation: modalSparkle 4s infinite;
+}
+
+@keyframes modalSparkle {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.2);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1);
+  }
+}
+
+.modal[data-temple="5"] {
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.modal[data-temple="5"] .modal-content {
+  box-shadow: 0 0 60px rgba(218, 165, 32, 0.4);
+  background: linear-gradient(
+    45deg,
+    rgba(218, 165, 32, 0.2),
+    rgba(147, 112, 219, 0.2),
+    rgba(255, 165, 0, 0.2)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  animation: modalLuxuryGlow 5s infinite;
+}
+
+@keyframes modalLuxuryGlow {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.3);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.3);
+    box-shadow: 0 0 60px rgba(218, 165, 32, 0.5);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1);
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.3);
+  }
+}
+
+/* Modal navigation buttons styling based on temple type */
+.modal[data-temple="1"] .modal-nav {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal[data-temple="2"] .modal-nav {
+  background: rgba(218, 165, 32, 0.1);
+  border: 1px solid rgba(218, 165, 32, 0.3);
+}
+
+.modal[data-temple="3"] .modal-nav {
+  background: rgba(147, 112, 219, 0.1);
+  border: 1px solid rgba(147, 112, 219, 0.3);
+  animation: navPulse 2s infinite;
+}
+
+.modal[data-temple="4"] .modal-nav {
+  background: rgba(138, 43, 226, 0.1);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  animation: navSparkle 3s infinite;
+}
+
+.modal[data-temple="5"] .modal-nav {
+  background: rgba(218, 165, 32, 0.15);
+  border: 1px solid rgba(218, 165, 32, 0.4);
+  animation: navLuxury 4s infinite;
+}
+
+@keyframes navPulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes navSparkle {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes navLuxury {
+  0% {
+    background: rgba(218, 165, 32, 0.15);
+  }
+  50% {
+    background: rgba(147, 112, 219, 0.15);
+  }
+  100% {
+    background: rgba(218, 165, 32, 0.15);
+  }
+}

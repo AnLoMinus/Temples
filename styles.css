@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #6a1b9a;
+  --secondary-color: #9c27b0;
+  --accent-color: #e1bee7;
+  --text-color: #333;
+  --background-color: #f5f5f5;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+/* Hero section */
+#hero {
+  position: relative;
+  min-height: 60vh;
+  margin-top: 76px;
+  overflow: hidden;
+}
+
+#hero .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#hero .carousel-item {
+  height: 60vh;
+}
+
+#hero .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+#hero .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(106, 27, 154, 0.6), rgba(156, 39, 176, 0.6));
+}
+
+.hero-content {
+  z-index: 2;
+  width: 100%;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel controls customization */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#hero:hover .carousel-control-prev,
+#hero:hover .carousel-control-next {
+  opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(106, 27, 154, 0.5);
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+/* Gallery styles */
+.gallery-item.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.gallery-item.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Modal styles */
+.modal-dialog {
+  max-width: 90%;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1050;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1050;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+/* Section styles */
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+/* Contact section */
+.contact-info i {
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero {
+    min-height: 50vh;
+  }
+
+  #hero .carousel-item {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content .lead {
+    font-size: 1rem;
+  }
+
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+
+  .modal-nav {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Modal description styles */
+.modal-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.modal-description.show {
+  transform: translateY(0);
+}
+
+.description-toggle {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1060;
+}
+
+.description-toggle .btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.description-toggle .btn:hover {
+  background: white;
+}
+
+/* Scrollbar styling for description */
+.modal-description::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-description::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-description::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .modal-description {
+    max-height: 50vh;
+  }
+
+  .description-toggle .btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  #modal-title {
+    font-size: 1.5rem;
+  }
+
+  #modal-text {
+    font-size: 0.9rem;
+  }
+}
