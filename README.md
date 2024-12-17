@@ -36,7 +36,7 @@ EtherealTempleDesigns/
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/AnLoMinus/AnLoMinus-Temples.git
+   git clone https://github.com/AnLoMinus/Temples.git
    ```
 
 2. **Navigate to the Gallery**:
@@ -57,6 +57,8 @@ EtherealTempleDesigns/
 ## 🌍 Live Demo
 
 Coming soon! Stay tuned for the **GitHub Pages** live gallery. 🌐✨
+
+https://anlominus.github.io/Temples
 
 ---
 
@@ -79,8 +81,5 @@ This project is licensed under the **MIT License**. Feel free to use and share r
 ## 💌 Connect with Us
 
 Have feedback or ideas? Reach out!
-
-📧 Email: <your-email@example.com>  
-🐦 Twitter: [@YourHandle](https://twitter.com/YourHandle)  
 
 Let's create something magical together! 🌈✨
