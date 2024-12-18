@@ -140,6 +140,97 @@
   }
 }
 
+/* Temple 6 - Divine Radiance Effects */
+.gallery-item[data-temple="6"] {
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+.gallery-item[data-temple="6"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(147, 112, 219, 0.2)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  animation: divineGlow 4s infinite;
+}
+
+@keyframes divineGlow {
+  0% {
+    opacity: 0.5;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    opacity: 0.5;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Temple 7 - Ethereal Pinnacle Effects */
+.gallery-item[data-temple="7"] {
+  box-shadow: 0 5px 20px rgba(138, 43, 226, 0.4);
+}
+
+.gallery-item[data-temple="7"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(138, 43, 226, 0.2),
+    rgba(255, 215, 0, 0.2)
+  );
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  animation: etherealPulse 3s infinite;
+}
+
+@keyframes etherealPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Temple 8 - Sacred Zenith Effects */
+.gallery-item[data-temple="8"] {
+  box-shadow: 0 5px 20px rgba(255, 223, 0, 0.4);
+}
+
+.gallery-item[data-temple="8"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 223, 0, 0.2),
+    rgba(138, 43, 226, 0.2),
+    rgba(0, 255, 255, 0.2)
+  );
+  border: 2px solid rgba(255, 223, 0, 0.3);
+  animation: zenithShimmer 5s infinite;
+}
+
+@keyframes zenithShimmer {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.8;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+}
+
 /* Text effects for all cards */
 .gallery-item-content h3 {
   background: linear-gradient(
@@ -368,5 +459,36 @@
   }
   100% {
     background: rgba(218, 165, 32, 0.15);
+  }
+}
+
+/* Modal effects for new temples */
+.modal[data-temple="6"] .modal-content,
+.modal[data-temple="7"] .modal-content,
+.modal[data-temple="8"] .modal-content {
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(147, 112, 219, 0.2)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  animation: newTempleGlow 5s infinite;
+}
+
+@keyframes newTempleGlow {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.3);
+    box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
   }
 }
