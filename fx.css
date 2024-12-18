@@ -960,3 +960,264 @@
     transform: scale(1) translateY(0) perspective(1200px) rotateY(0deg);
   }
 }
+
+/* Temple 16 - Harmonic Fusion Effects */
+.gallery-item[data-temple="16"] {
+  box-shadow: 0 5px 20px rgba(218, 165, 32, 0.7);
+}
+
+.gallery-item[data-temple="16"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.4),
+    rgba(147, 112, 219, 0.4),
+    rgba(0, 255, 255, 0.4),
+    rgba(255, 140, 0, 0.4)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.6);
+  animation: harmonicFusionFlow 16s infinite;
+}
+
+@keyframes harmonicFusionFlow {
+  0% {
+    opacity: 0.7;
+    filter: hue-rotate(0deg) brightness(1.3) saturate(1.2);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1400px) rotate3d(1, 1, 0, 0deg);
+  }
+  25% {
+    opacity: 0.9;
+    filter: hue-rotate(90deg) brightness(1.5) saturate(1.4);
+    background-position: 50% 100%;
+    transform: scale(1.03) perspective(1400px) rotate3d(1, 1, 0, 3deg);
+  }
+  50% {
+    opacity: 1;
+    filter: hue-rotate(180deg) brightness(1.7) saturate(1.6);
+    background-position: 100% 50%;
+    transform: scale(1.05) perspective(1400px) rotate3d(1, 1, 0, 0deg);
+  }
+  75% {
+    opacity: 0.9;
+    filter: hue-rotate(270deg) brightness(1.5) saturate(1.4);
+    background-position: 50% 0%;
+    transform: scale(1.03) perspective(1400px) rotate3d(1, 1, 0, -3deg);
+  }
+  100% {
+    opacity: 0.7;
+    filter: hue-rotate(360deg) brightness(1.3) saturate(1.2);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1400px) rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+/* Modal effect for Temple 16 */
+.modal[data-temple="16"] .modal-content {
+  box-shadow: 0 0 130px rgba(218, 165, 32, 0.7);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.4),
+    rgba(147, 112, 219, 0.4),
+    rgba(0, 255, 255, 0.4),
+    rgba(255, 140, 0, 0.4)
+  );
+  border: 2px solid rgba(218, 165, 32, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+  animation: harmonicFusionModal 11s infinite;
+}
+
+@keyframes harmonicFusionModal {
+  0% {
+    filter: hue-rotate(0deg) brightness(1.4) saturate(1.3);
+    box-shadow: 0 0 100px rgba(218, 165, 32, 0.6);
+    transform: scale(1) translateY(0) perspective(1400px)
+      rotate3d(1, 1, 0, 0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.8) saturate(1.6);
+    box-shadow: 0 0 150px rgba(218, 165, 32, 0.8);
+    transform: scale(1.04) translateY(-12px) perspective(1400px)
+      rotate3d(1, 1, 0, 2deg);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1.4) saturate(1.3);
+    box-shadow: 0 0 100px rgba(218, 165, 32, 0.6);
+    transform: scale(1) translateY(0) perspective(1400px)
+      rotate3d(1, 1, 0, 0deg);
+  }
+}
+
+/* Temple 17 - Elysian Harmony Effects */
+.gallery-item[data-temple="17"] {
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.8);
+}
+
+.gallery-item[data-temple="17"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.5),
+    rgba(192, 192, 192, 0.5),
+    rgba(147, 112, 219, 0.5),
+    rgba(0, 255, 255, 0.4)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.7);
+  animation: elysianHarmonyFlow 18s infinite;
+}
+
+@keyframes elysianHarmonyFlow {
+  0% {
+    opacity: 0.8;
+    filter: hue-rotate(0deg) brightness(1.4) saturate(1.3);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1600px) rotate3d(1, 1, 1, 0deg);
+  }
+  25% {
+    opacity: 0.9;
+    filter: hue-rotate(90deg) brightness(1.6) saturate(1.5);
+    background-position: 50% 100%;
+    transform: scale(1.04) perspective(1600px) rotate3d(1, 1, 1, 4deg);
+  }
+  50% {
+    opacity: 1;
+    filter: hue-rotate(180deg) brightness(1.8) saturate(1.7);
+    background-position: 100% 50%;
+    transform: scale(1.06) perspective(1600px) rotate3d(1, 1, 1, 0deg);
+  }
+  75% {
+    opacity: 0.9;
+    filter: hue-rotate(270deg) brightness(1.6) saturate(1.5);
+    background-position: 50% 0%;
+    transform: scale(1.04) perspective(1600px) rotate3d(1, 1, 1, -4deg);
+  }
+  100% {
+    opacity: 0.8;
+    filter: hue-rotate(360deg) brightness(1.4) saturate(1.3);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1600px) rotate3d(1, 1, 1, 0deg);
+  }
+}
+
+/* Modal effect for Temple 17 */
+.modal[data-temple="17"] .modal-content {
+  box-shadow: 0 0 150px rgba(255, 215, 0, 0.8);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.5),
+    rgba(192, 192, 192, 0.5),
+    rgba(147, 112, 219, 0.5),
+    rgba(0, 255, 255, 0.4)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.6);
+  border-radius: 15px;
+  padding: 20px;
+  animation: elysianHarmonyModal 12s infinite;
+}
+
+@keyframes elysianHarmonyModal {
+  0% {
+    filter: hue-rotate(0deg) brightness(1.5) saturate(1.4);
+    box-shadow: 0 0 120px rgba(255, 215, 0, 0.7);
+    transform: scale(1) translateY(0) perspective(1600px)
+      rotate3d(1, 1, 1, 0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.9) saturate(1.7);
+    box-shadow: 0 0 180px rgba(255, 215, 0, 0.9);
+    transform: scale(1.05) translateY(-15px) perspective(1600px)
+      rotate3d(1, 1, 1, 3deg);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1.5) saturate(1.4);
+    box-shadow: 0 0 120px rgba(255, 215, 0, 0.7);
+    transform: scale(1) translateY(0) perspective(1600px)
+      rotate3d(1, 1, 1, 0deg);
+  }
+}
+
+/* Temple 18 - Celestial Symphony Effects */
+.gallery-item[data-temple="18"] {
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.9);
+}
+
+.gallery-item[data-temple="18"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.6),
+    rgba(147, 112, 219, 0.6),
+    rgba(0, 255, 255, 0.5),
+    rgba(255, 140, 0, 0.6)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.8);
+  animation: celestialSymphonyFlow 20s infinite;
+}
+
+@keyframes celestialSymphonyFlow {
+  0% {
+    opacity: 0.8;
+    filter: hue-rotate(0deg) brightness(1.5) saturate(1.4);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1800px) rotate3d(1, 2, 1, 0deg);
+  }
+  25% {
+    opacity: 0.9;
+    filter: hue-rotate(90deg) brightness(1.7) saturate(1.6);
+    background-position: 50% 100%;
+    transform: scale(1.05) perspective(1800px) rotate3d(1, 2, 1, 5deg);
+  }
+  50% {
+    opacity: 1;
+    filter: hue-rotate(180deg) brightness(1.9) saturate(1.8);
+    background-position: 100% 50%;
+    transform: scale(1.08) perspective(1800px) rotate3d(1, 2, 1, 0deg);
+  }
+  75% {
+    opacity: 0.9;
+    filter: hue-rotate(270deg) brightness(1.7) saturate(1.6);
+    background-position: 50% 0%;
+    transform: scale(1.05) perspective(1800px) rotate3d(1, 2, 1, -5deg);
+  }
+  100% {
+    opacity: 0.8;
+    filter: hue-rotate(360deg) brightness(1.5) saturate(1.4);
+    background-position: 0% 50%;
+    transform: scale(1) perspective(1800px) rotate3d(1, 2, 1, 0deg);
+  }
+}
+
+/* Modal effect for Temple 18 */
+.modal[data-temple="18"] .modal-content {
+  box-shadow: 0 0 180px rgba(255, 215, 0, 0.9);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.6),
+    rgba(147, 112, 219, 0.6),
+    rgba(0, 255, 255, 0.5),
+    rgba(255, 140, 0, 0.6)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  animation: celestialSymphonyModal 13s infinite;
+}
+
+@keyframes celestialSymphonyModal {
+  0% {
+    filter: hue-rotate(0deg) brightness(1.6) saturate(1.5);
+    box-shadow: 0 0 140px rgba(255, 215, 0, 0.8);
+    transform: scale(1) translateY(0) perspective(1800px)
+      rotate3d(1, 2, 1, 0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(2) saturate(1.8);
+    box-shadow: 0 0 200px rgba(255, 215, 0, 1);
+    transform: scale(1.06) translateY(-18px) perspective(1800px)
+      rotate3d(1, 2, 1, 4deg);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1.6) saturate(1.5);
+    box-shadow: 0 0 140px rgba(255, 215, 0, 0.8);
+    transform: scale(1) translateY(0) perspective(1800px)
+      rotate3d(1, 2, 1, 0deg);
+  }
+}
