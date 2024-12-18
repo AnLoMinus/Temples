@@ -492,3 +492,137 @@
     box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
   }
 }
+
+/* Temple 9 - Luminous Apex Effects */
+.gallery-item[data-temple="9"] {
+  box-shadow: 0 5px 20px rgba(192, 192, 192, 0.5);
+}
+
+.gallery-item[data-temple="9"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(192, 192, 192, 0.2),
+    rgba(147, 112, 219, 0.2)
+  );
+  border: 2px solid rgba(192, 192, 192, 0.3);
+  animation: luminousFlow 6s infinite;
+}
+
+@keyframes luminousFlow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.9;
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Temple 10 - Astral Sanctuary Effects */
+.gallery-item[data-temple="10"] {
+  box-shadow: 0 5px 20px rgba(147, 112, 219, 0.5);
+}
+
+.gallery-item[data-temple="10"]::before {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(147, 112, 219, 0.3),
+    rgba(0, 255, 255, 0.2)
+  );
+  border: 2px solid rgba(147, 112, 219, 0.3);
+  animation: astralPulse 5s infinite;
+}
+
+@keyframes astralPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.9;
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Temple 11 - Transcendent Haven Effects */
+.gallery-item[data-temple="11"] {
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+}
+
+.gallery-item[data-temple="11"]::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.3),
+    rgba(147, 112, 219, 0.2),
+    rgba(0, 255, 255, 0.2)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  animation: transcendentGlow 7s infinite;
+}
+
+@keyframes transcendentGlow {
+  0% {
+    opacity: 0.6;
+    filter: hue-rotate(0deg) brightness(1);
+    background-position: 0% 50%;
+  }
+  50% {
+    opacity: 0.9;
+    filter: hue-rotate(180deg) brightness(1.3);
+    background-position: 100% 50%;
+  }
+  100% {
+    opacity: 0.6;
+    filter: hue-rotate(360deg) brightness(1);
+    background-position: 0% 50%;
+  }
+}
+
+/* Modal effects for newest temples */
+.modal[data-temple="9"] .modal-content,
+.modal[data-temple="10"] .modal-content,
+.modal[data-temple="11"] .modal-content {
+  box-shadow: 0 0 70px rgba(147, 112, 219, 0.5);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.2),
+    rgba(147, 112, 219, 0.2),
+    rgba(0, 255, 255, 0.2)
+  );
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  animation: newestTempleGlow 6s infinite;
+}
+
+@keyframes newestTempleGlow {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+    box-shadow: 0 0 50px rgba(147, 112, 219, 0.4);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.4);
+    box-shadow: 0 0 80px rgba(147, 112, 219, 0.6);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1);
+    box-shadow: 0 0 50px rgba(147, 112, 219, 0.4);
+  }
+}
