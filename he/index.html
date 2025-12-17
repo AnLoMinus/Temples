@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">
+    <link rel="preload" as="image" href="../images/1.webp" type="image/webp">
+    <title>מקדשי AnLoMinus - ארכיטקטורה מקודשת עתידנית</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">🕍 מקדשי AnLoMinus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">גלריה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">אודות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">צור קשר</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="d-flex align-items-center justify-content-center text-center text-white">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../images/1.webp" class="d-block w-100" alt="צומת האחדות">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/2.webp" class="d-block w-100" alt="היכל הקריסטל">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/3.webp" class="d-block w-100" alt="מנסרה מיסטית">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/4.webp" class="d-block w-100" alt="מגדל הספקטרום">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/5.webp" class="d-block w-100" alt="כתר שמימי">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/6.webp" class="d-block w-100" alt="זוהר אלוהי">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/7.webp" class="d-block w-100" alt="פסגה אתרית">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/8.webp" class="d-block w-100" alt="שיא קדוש">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/9.webp" class="d-block w-100" alt="קודקוד זוהר">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/10.webp" class="d-block w-100" alt="מקדש אסטרלי">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/11.webp" class="d-block w-100" alt="מקלט נשגב">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/12.webp" class="d-block w-100" alt="קודקוד שמימי">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/13.webp" class="d-block w-100" alt="הרמוניה אלוהית">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/14.webp" class="d-block w-100" alt="שלווה קורנת">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../images/15.webp" class="d-block w-100" alt="הוד מיסטי">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">הקודם</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">הבא</span>
+                </button>
+            </div>
+            <div class="hero-content position-absolute">
+                <div class="container">
+                    <h1 class="display-4 mb-4 text-shadow">ברוכים הבאים למקדשי AnLoMinus</h1>
+                    <p class="lead text-shadow">גלו פלאים ארכיטקטוניים עתידניים המשלבים גאומטריות מקודשות עם אסתטיקה מודרנית</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">גלריית מקדשים</h2>
+                <div class="row g-4" id="gallery-container">
+                    <!-- Gallery items will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">על החזון שלנו</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="lead">EtherealTempleDesigns מייצגת את המיזוג בין ארכיטקטורה מקודשת עתיקה לבין עיצוב עתידני. כל יצירה באוסף שלנו מספרת סיפור ייחודי של רוחניות וחדשנות.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-3 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 מקדשי AnLoMinus. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="gallery-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="modal-close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <img id="modal-image" src="" alt="תצוגה מלאה של המקדש" class="img-fluid">
+                    <div class="description-toggle">
+                        <button class="btn btn-light btn-sm" id="toggleDescription">
+                            <i class="fas fa-info-circle"></i> הצג תיאור
+                        </button>
+                    </div>
+                    <div class="modal-description text-center p-4" id="modalDescription">
+                        <h3 id="modal-title" class="mb-3"></h3>
+                        <p id="modal-text" class="mb-0"></p>
+                    </div>
+                </div>
+                <button class="modal-nav prev btn btn-outline-light">&lt;</button>
+                <button class="modal-nav next btn btn-outline-light">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+@import url("../styles.css");
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+.navbar .navbar-nav {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.gallery-item .card-body,
+.modal-description,
+.hero-content .container {
+  text-align: right;
+}
+
+.modal-description.show {
+  max-height: none;
+}
